@@ -1,0 +1,141 @@
+
+GetOrganelle v1.4.4
+
+gets organelle reads and genomes from genome skimming data by extending.
+Find updates in https://github.com/Kinggerm/GetOrganelle and see README.md for more information.
+
+Python 3.6.5 (default, Sep 20 2018, 17:13:01) 
+[GCC 4.8.5 20150623 (Red Hat 4.8.5-28)]
+/Program/GetOrganelle/get_organelle_reads.py -1 ERR268390_1.fastq.gz -2 ERR268390_2.fastq.gz -o auto--ERR268390-plastome -s /Program/GetOrganelle/Library/SeqReference/cp.fasta -R 10 -t 1 -k 75,95,115,127
+
+2018-12-01 18:21:13,210 - INFO: Unzipping reads file: ERR268390_1.fastq.gz
+2018-12-01 18:22:05,932 - INFO: Unzipping reads file: ERR268390_2.fastq.gz
+2018-12-01 18:22:36,608 - INFO: Pre-reading fastq ...
+2018-12-01 18:22:36,608 - INFO: Counting read qualities ...
+2018-12-01 18:23:40,691 - INFO: Identified quality encoding format = Illumina 1.8+
+2018-12-01 18:23:40,872 - INFO: Trimming bases with qualities (0.00%): 33..33  !
+2018-12-01 18:23:53,766 - INFO: Mean error rate = 0.0349
+2018-12-01 18:23:54,004 - INFO: Counting read lengths ...
+2018-12-01 18:24:45,080 - INFO: Mean = 101.0 bp, maximum = 101 bp.
+2018-12-01 18:24:45,081 - INFO: Pre-reading fastq finished.
+
+2018-12-01 18:24:45,081 - INFO: Making seed reads ...
+2018-12-01 18:24:45,084 - INFO: Bowtie2 index existed!
+2018-12-01 18:24:45,084 - INFO: Mapping reads to seed - bowtie2 index ...
+2018-12-01 18:31:58,596 - INFO: Mapping finished.
+2018-12-01 18:31:58,597 - INFO: Seed reads made: auto--ERR268390-plastome/Initial.mapped.fq (20.53 M)
+2018-12-01 18:31:58,597 - INFO: Making seed reads finished.
+
+2018-12-01 18:31:58,597 - INFO: Checking seed reads and parameters ...
+2018-12-01 18:32:05,190 - INFO: Estimated cp base-coverage = 125.77
+2018-12-01 18:32:05,191 - INFO: Setting '-w 49'
+2018-12-01 18:32:05,192 - INFO: The automatically-estimated word size does not ensure the best choice.
+2018-12-01 18:32:05,192 - INFO: If the result graph is not a circular organelle genome, 
+2018-12-01 18:32:05,192 - INFO: you could adjust the word size for another new run.
+2018-12-01 18:32:05,192 - INFO: Checking seed reads and parameters finished.
+
+2018-12-01 18:32:05,192 - INFO: Making read index ...
+2018-12-01 18:37:23,301 - INFO: Mem 4.78 G, 19451033 candidates in all 20000000 reads
+2018-12-01 18:37:23,402 - INFO: Pre-grouping reads ...
+2018-12-01 18:37:23,402 - INFO: Setting '--pre-w 49'
+2018-12-01 18:37:26,209 - INFO: Mem 4.317 G, 200000/459887 used/duplicated
+2018-12-01 18:38:17,341 - INFO: Mem 6.547 G, 6270 groups made.
+2018-12-01 18:38:27,130 - INFO: Making read index finished.
+
+2018-12-01 18:38:27,130 - INFO: Extending ...
+2018-12-01 18:38:27,131 - INFO: Adding initial words ...
+2018-12-01 18:38:33,055 - INFO: AW 878056
+2018-12-01 18:44:48,409 - INFO: Round 1: 19451033/19451033 AI 2816769 AW 74232800 Mem 10.97
+2018-12-01 18:49:17,684 - INFO: Round 2: 19451033/19451033 AI 4279515 AW 123858902 Mem 17.996
+2018-12-01 18:53:29,290 - INFO: Round 3: 19451033/19451033 AI 4800079 AW 143074054 Mem 19.941
+2018-12-01 18:57:11,003 - INFO: Round 4: 19451033/19451033 AI 5056481 AW 152308370 Mem 20.876
+2018-12-01 19:00:56,598 - INFO: Round 5: 19451033/19451033 AI 5204427 AW 157415932 Mem 21.393
+2018-12-01 19:04:26,653 - INFO: Round 6: 19451033/19451033 AI 5298595 AW 160525096 Mem 21.708
+2018-12-01 19:08:23,869 - INFO: Round 7: 19451033/19451033 AI 5363878 AW 162583386 Mem 21.916
+2018-12-01 19:11:48,457 - INFO: Round 8: 19451033/19451033 AI 5412977 AW 164049070 Mem 22.065
+2018-12-01 19:15:14,746 - INFO: Round 9: 19451033/19451033 AI 5450502 AW 165136040 Mem 22.175
+2018-12-01 19:18:26,307 - INFO: Round 10: 19451033/19451033 AI 5480664 AW 165980320 Mem 22.261
+2018-12-01 19:18:26,307 - INFO: Hit the round limit 10 and terminated ...
+2018-12-01 19:35:51,078 - INFO: Extending finished.
+
+2018-12-01 19:35:53,465 - INFO: Separating filtered fastq file ... 
+2018-12-01 19:36:24,217 - INFO: Separating filtered fastq file finished!
+2018-12-01 19:36:24,751 - INFO: Setting '-k 45,55,65,75,85,95'
+2018-12-01 19:36:24,751 - INFO: Assembling using SPAdes ...
+2018-12-01 23:43:21,646 - INFO: Insert size = 398.8, deviation = 139.435, left quantile = 219, right quantile = 583
+2018-12-01 23:43:21,647 - INFO: Assembling finished.
+
+2018-12-01 23:43:21,647 - INFO: Slimming and disentangling graph ...
+2018-12-01 23:43:28,222 - INFO: Slimming      auto--ERR268390-plastome/filtered_spades/K95/assembly_graph.fastg finished!
+2018-12-01 23:43:29,096 - INFO: Disentangling auto--ERR268390-plastome/filtered_spades/K95/assembly_graph.fastg.extend+cp-mt.fastg as a circular genome ... 
+2018-12-01 23:53:28,223 - INFO: Disentangling failed.
+2018-12-01 23:53:37,735 - INFO: Slimming      auto--ERR268390-plastome/filtered_spades/K85/assembly_graph.fastg finished!
+2018-12-01 23:53:37,736 - INFO: Disentangling auto--ERR268390-plastome/filtered_spades/K85/assembly_graph.fastg.extend+cp-mt.fastg as a circular genome ... 
+2018-12-02 00:03:37,737 - INFO: Disentangling failed.
+2018-12-02 00:03:44,747 - INFO: Slimming      auto--ERR268390-plastome/filtered_spades/K75/assembly_graph.fastg finished!
+2018-12-02 00:03:44,748 - INFO: Disentangling auto--ERR268390-plastome/filtered_spades/K75/assembly_graph.fastg.extend+cp-mt.fastg as a circular genome ... 
+2018-12-02 00:13:44,748 - INFO: Disentangling failed.
+2018-12-02 00:13:51,900 - INFO: Slimming      auto--ERR268390-plastome/filtered_spades/K65/assembly_graph.fastg finished!
+2018-12-02 00:13:51,901 - INFO: Disentangling auto--ERR268390-plastome/filtered_spades/K65/assembly_graph.fastg.extend+cp-mt.fastg as a circular genome ... 
+2018-12-02 00:23:51,901 - INFO: Disentangling failed.
+2018-12-02 00:23:59,884 - INFO: Slimming      auto--ERR268390-plastome/filtered_spades/K55/assembly_graph.fastg finished!
+2018-12-02 00:23:59,885 - INFO: Disentangling auto--ERR268390-plastome/filtered_spades/K55/assembly_graph.fastg.extend+cp-mt.fastg as a circular genome ... 
+2018-12-02 00:34:00,455 - INFO: Vertex_36724972 #copy = 1
+2018-12-02 00:34:00,455 - INFO: Vertex_37087026 #copy = 2
+2018-12-02 00:34:00,455 - INFO: Vertex_38476442 #copy = 2
+2018-12-02 00:34:00,456 - INFO: Vertex_38778840 #copy = 2
+2018-12-02 00:34:00,456 - INFO: Vertex_38804536_35711734_41221481_41221483_8323014_38936584_5037974_37209682_40951099_41505495 #copy = 1
+2018-12-02 00:34:00,456 - INFO: Vertex_39009948 #copy = 2
+2018-12-02 00:34:00,456 - INFO: Vertex_39065766 #copy = 1
+2018-12-02 00:34:00,456 - INFO: Vertex_39077348 #copy = 2
+2018-12-02 00:34:00,456 - INFO: Vertex_39114698 #copy = 2
+2018-12-02 00:34:00,456 - INFO: Vertex_39114704 #copy = 2
+2018-12-02 00:34:00,456 - INFO: Vertex_40165288 #copy = 1
+2018-12-02 00:34:00,456 - INFO: Vertex_40532563 #copy = 1
+2018-12-02 00:34:00,456 - INFO: Vertex_40564739 #copy = 1
+2018-12-02 00:34:00,457 - INFO: Vertex_40706039 #copy = 1
+2018-12-02 00:34:00,457 - INFO: Vertex_40790865 #copy = 1
+2018-12-02 00:34:00,457 - INFO: Vertex_40831857_36978570_40903301 #copy = 1
+2018-12-02 00:34:00,457 - INFO: Vertex_40846121_1800158_39766071_40814499_40814501_40644401_40033348_40564741 #copy = 1
+2018-12-02 00:34:00,457 - INFO: Vertex_40887763 #copy = 1
+2018-12-02 00:34:00,457 - INFO: Vertex_40899353 #copy = 1
+2018-12-02 00:34:00,457 - INFO: Vertex_41497101 #copy = 1
+2018-12-02 00:34:00,457 - INFO: Vertex_41529205 #copy = 2
+2018-12-02 00:34:00,457 - INFO: Vertex_41529209 #copy = 1
+2018-12-02 00:34:00,457 - INFO: Vertex_41529211 #copy = 1
+2018-12-02 00:34:00,457 - INFO: Vertex_41627227_40892307_40801375_40983477 #copy = 1
+2018-12-02 00:34:00,458 - INFO: Average cp kmer-coverage = 128.111
+2018-12-02 00:34:00,458 - INFO: Average cp base-coverage = 275.324
+2018-12-02 00:34:00,458 - INFO: Slimming and disentangling graph finished!
+
+2018-12-02 00:34:00,458 - INFO: Writing output ...
+2018-12-02 00:34:00,701 - WARNING: Multiple circular genome structures produced!
+2018-12-02 00:34:00,701 - WARNING: Please check the existence of those isomers by using reads mapping (library information) or longer reads.
+2018-12-02 00:34:00,705 - INFO: Writing PATH1 of complete genome to auto--ERR268390-plastome/cp.K55.complete.graph1.1.path_sequence.fasta
+2018-12-02 00:34:00,709 - INFO: Writing PATH2 of complete genome to auto--ERR268390-plastome/cp.K55.complete.graph1.2.path_sequence.fasta
+2018-12-02 00:34:00,713 - INFO: Writing PATH3 of complete genome to auto--ERR268390-plastome/cp.K55.complete.graph1.3.path_sequence.fasta
+2018-12-02 00:34:00,717 - INFO: Writing PATH4 of complete genome to auto--ERR268390-plastome/cp.K55.complete.graph1.4.path_sequence.fasta
+2018-12-02 00:34:00,721 - INFO: Writing PATH5 of complete genome to auto--ERR268390-plastome/cp.K55.complete.graph1.5.path_sequence.fasta
+2018-12-02 00:34:00,725 - INFO: Writing PATH6 of complete genome to auto--ERR268390-plastome/cp.K55.complete.graph1.6.path_sequence.fasta
+2018-12-02 00:34:00,728 - INFO: Writing PATH7 of complete genome to auto--ERR268390-plastome/cp.K55.complete.graph1.7.path_sequence.fasta
+2018-12-02 00:34:00,732 - INFO: Writing PATH8 of complete genome to auto--ERR268390-plastome/cp.K55.complete.graph1.8.path_sequence.fasta
+2018-12-02 00:34:00,736 - INFO: Writing PATH9 of complete genome to auto--ERR268390-plastome/cp.K55.complete.graph1.9.path_sequence.fasta
+2018-12-02 00:34:00,740 - INFO: Writing PATH10 of complete genome to auto--ERR268390-plastome/cp.K55.complete.graph1.10.path_sequence.fasta
+2018-12-02 00:34:00,744 - INFO: Writing PATH11 of complete genome to auto--ERR268390-plastome/cp.K55.complete.graph1.11.path_sequence.fasta
+2018-12-02 00:34:00,748 - INFO: Writing PATH12 of complete genome to auto--ERR268390-plastome/cp.K55.complete.graph1.12.path_sequence.fasta
+2018-12-02 00:34:00,752 - INFO: Writing PATH13 of complete genome to auto--ERR268390-plastome/cp.K55.complete.graph1.13.path_sequence.fasta
+2018-12-02 00:34:00,756 - INFO: Writing PATH14 of complete genome to auto--ERR268390-plastome/cp.K55.complete.graph1.14.path_sequence.fasta
+2018-12-02 00:34:00,760 - INFO: Writing PATH15 of complete genome to auto--ERR268390-plastome/cp.K55.complete.graph1.15.path_sequence.fasta
+2018-12-02 00:34:00,764 - INFO: Writing PATH16 of complete genome to auto--ERR268390-plastome/cp.K55.complete.graph1.16.path_sequence.fasta
+2018-12-02 00:34:00,768 - INFO: Writing PATH17 of complete genome to auto--ERR268390-plastome/cp.K55.complete.graph1.17.path_sequence.fasta
+2018-12-02 00:34:00,772 - INFO: Writing PATH18 of complete genome to auto--ERR268390-plastome/cp.K55.complete.graph1.18.path_sequence.fasta
+2018-12-02 00:34:00,776 - INFO: Writing PATH19 of complete genome to auto--ERR268390-plastome/cp.K55.complete.graph1.19.path_sequence.fasta
+2018-12-02 00:34:00,780 - INFO: Writing PATH20 of complete genome to auto--ERR268390-plastome/cp.K55.complete.graph1.20.path_sequence.fasta
+2018-12-02 00:34:00,784 - INFO: Writing PATH21 of complete genome to auto--ERR268390-plastome/cp.K55.complete.graph1.21.path_sequence.fasta
+2018-12-02 00:34:00,784 - INFO: Writing GRAPH to auto--ERR268390-plastome/cp.K55.complete.graph1.selected_graph.gfa
+2018-12-02 00:34:00,786 - INFO: Result status: circular genome
+2018-12-02 00:34:01,038 - INFO: Please visualize auto--ERR268390-plastome/cp.K55.assembly_graph.fastg.extend+cp-mt.fastg to confirm the final result.
+2018-12-02 00:34:01,039 - INFO: Writing output finished.
+
+Total cost 22368.51 s
+Thank you!

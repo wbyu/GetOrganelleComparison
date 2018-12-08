@@ -1,0 +1,92 @@
+
+GetOrganelle v1.4.4
+
+gets organelle reads and genomes from genome skimming data by extending.
+Find updates in https://github.com/Kinggerm/GetOrganelle and see README.md for more information.
+
+Python 3.6.5 (default, Sep 20 2018, 17:13:01) 
+[GCC 4.8.5 20150623 (Red Hat 4.8.5-28)]
+/Program/GetOrganelle/get_organelle_reads.py -1 SRR5602602_1.fastq.gz -2 SRR5602602_2.fastq.gz -o 65R30--SRR5602602-plastome -s /Program/GetOrganelle/Library/SeqReference/cp.fasta -R 30 -t 1 -k 75,95,115,127 --max-n-words 1E10 -w 0.65
+
+2018-12-02 01:31:40,221 - INFO: Unzipping reads file: SRR5602602_1.fastq.gz
+2018-12-02 01:31:49,570 - INFO: Unzipping reads file: SRR5602602_2.fastq.gz
+2018-12-02 01:32:01,119 - INFO: Pre-reading fastq ...
+2018-12-02 01:32:01,119 - INFO: Counting read qualities ...
+2018-12-02 01:32:11,993 - INFO: Identified quality encoding format = Sanger
+2018-12-02 01:32:12,027 - INFO: Trimming bases with qualities (0.00%): 33..33  !
+2018-12-02 01:32:14,924 - INFO: Mean error rate = 0.0057
+2018-12-02 01:32:14,973 - INFO: Counting read lengths ...
+2018-12-02 01:32:21,787 - INFO: Mean = 248.0 bp, maximum = 250 bp.
+2018-12-02 01:32:21,787 - INFO: Pre-reading fastq finished.
+
+2018-12-02 01:32:21,787 - INFO: Making seed reads ...
+2018-12-02 01:32:21,788 - INFO: Bowtie2 index existed!
+2018-12-02 01:32:21,789 - INFO: Mapping reads to seed - bowtie2 index ...
+2018-12-02 01:34:33,650 - INFO: Mapping finished.
+2018-12-02 01:34:33,650 - INFO: Seed reads made: 65R30--SRR5602602-plastome/Initial.mapped.fq (27.12 M)
+2018-12-02 01:34:33,650 - INFO: Making seed reads finished.
+
+2018-12-02 01:34:33,651 - INFO: Checking seed reads and parameters ...
+2018-12-02 01:34:42,406 - INFO: Estimated cp base-coverage = 157.53
+2018-12-02 01:34:42,407 - INFO: Setting '-w 161'
+2018-12-02 01:34:42,407 - INFO: Checking seed reads and parameters finished.
+
+2018-12-02 01:34:42,407 - INFO: Making read index ...
+2018-12-02 01:35:50,673 - INFO: Mem 1.754 G, 3501985 candidates in all 3549864 reads
+2018-12-02 01:35:50,681 - INFO: Pre-grouping reads ...
+2018-12-02 01:35:50,682 - INFO: Setting '--pre-w 161'
+2018-12-02 01:35:51,704 - INFO: Mem 1.598 G, 22168/22168 used/duplicated
+2018-12-02 01:36:06,055 - INFO: Mem 1.843 G, 299 groups made.
+2018-12-02 01:36:06,953 - INFO: Making read index finished.
+
+2018-12-02 01:36:06,953 - INFO: Extending ...
+2018-12-02 01:36:06,953 - INFO: Adding initial words ...
+2018-12-02 01:36:17,087 - INFO: AW 3744094
+2018-12-02 01:37:48,088 - INFO: Round 1: 3501985/3501985 AI 142130 AW 6544466 Mem 1.851
+2018-12-02 01:39:06,496 - INFO: Round 2: 3501985/3501985 AI 188005 AW 8512820 Mem 2.269
+2018-12-02 01:40:13,209 - INFO: Round 3: 3501985/3501985 AI 207271 AW 9542064 Mem 2.488
+2018-12-02 01:41:10,136 - INFO: Round 4: 3501985/3501985 AI 222647 AW 10351272 Mem 2.66
+2018-12-02 01:42:09,569 - INFO: Round 5: 3501985/3501985 AI 231766 AW 10841288 Mem 2.764
+2018-12-02 01:43:17,790 - INFO: Round 6: 3501985/3501985 AI 237200 AW 11151986 Mem 2.83
+2018-12-02 01:44:38,263 - INFO: Round 7: 3501985/3501985 AI 242116 AW 11426288 Mem 3.138
+2018-12-02 01:45:49,682 - INFO: Round 8: 3501985/3501985 AI 245407 AW 11615216 Mem 3.178
+2018-12-02 01:47:13,144 - INFO: Round 9: 3501985/3501985 AI 247640 AW 11746406 Mem 3.206
+2018-12-02 01:48:30,506 - INFO: Round 10: 3501985/3501985 AI 249758 AW 11868318 Mem 3.232
+2018-12-02 01:49:52,542 - INFO: Round 11: 3501985/3501985 AI 251825 AW 11974960 Mem 3.255
+2018-12-02 01:50:48,676 - INFO: Round 12: 3501985/3501985 AI 252477 AW 12012492 Mem 3.263
+2018-12-02 01:51:39,672 - INFO: Round 13: 3501985/3501985 AI 252725 AW 12027486 Mem 3.266
+2018-12-02 01:52:32,591 - INFO: Round 14: 3501985/3501985 AI 252795 AW 12032232 Mem 3.267
+2018-12-02 01:53:49,418 - INFO: Round 15: 3501985/3501985 AI 252804 AW 12032936 Mem 3.267
+2018-12-02 01:55:05,722 - INFO: Round 16: 3501985/3501985 AI 252804 AW 12032936 Mem 3.267
+2018-12-02 01:55:05,723 - INFO: No more reads found and terminated ...
+2018-12-02 01:55:31,779 - INFO: Extending finished.
+
+2018-12-02 01:55:32,386 - INFO: Separating filtered fastq file ... 
+2018-12-02 01:55:34,303 - INFO: Separating filtered fastq file finished!
+2018-12-02 01:55:34,347 - INFO: Setting '-k 75,85,95,105,115,127'
+2018-12-02 01:55:34,348 - INFO: Assembling using SPAdes ...
+2018-12-02 02:14:39,068 - INFO: Insert size = 556.025, deviation = 130.857, left quantile = 394, right quantile = 722
+2018-12-02 02:14:39,069 - INFO: Assembling finished.
+
+2018-12-02 02:14:39,070 - INFO: Slimming and disentangling graph ...
+2018-12-02 02:14:40,066 - INFO: Slimming      65R30--SRR5602602-plastome/filtered_spades/K127/assembly_graph.fastg finished!
+2018-12-02 02:14:41,097 - INFO: Disentangling 65R30--SRR5602602-plastome/filtered_spades/K127/assembly_graph.fastg.extend+cp-mt.fastg as a circular genome ... 
+2018-12-02 02:14:41,669 - INFO: Vertex_902908 #copy = 1
+2018-12-02 02:14:41,670 - INFO: Vertex_902910 #copy = 1
+2018-12-02 02:14:41,670 - INFO: Vertex_995502_836444_998574 #copy = 2
+2018-12-02 02:14:41,670 - INFO: Average cp kmer-coverage = 90.949
+2018-12-02 02:14:41,670 - INFO: Average cp base-coverage = 184.878
+2018-12-02 02:14:41,670 - INFO: Slimming and disentangling graph finished!
+
+2018-12-02 02:14:41,670 - INFO: Writing output ...
+2018-12-02 02:14:41,670 - WARNING: More than one circular genome structure produced ...
+2018-12-02 02:14:41,670 - WARNING: Please check the final result to confirm whether they are simply flip-flop configurations!
+2018-12-02 02:14:41,675 - INFO: Writing PATH1 of complete genome to 65R30--SRR5602602-plastome/cp.K127.complete.graph1.1.path_sequence.fasta
+2018-12-02 02:14:41,680 - INFO: Writing PATH2 of complete genome to 65R30--SRR5602602-plastome/cp.K127.complete.graph1.2.path_sequence.fasta
+2018-12-02 02:14:41,680 - INFO: Writing GRAPH to 65R30--SRR5602602-plastome/cp.K127.complete.graph1.selected_graph.gfa
+2018-12-02 02:14:41,680 - INFO: Result status: circular genome
+2018-12-02 02:14:41,706 - INFO: Please visualize 65R30--SRR5602602-plastome/cp.K127.assembly_graph.fastg.extend+cp-mt.fastg to confirm the final result.
+2018-12-02 02:14:41,706 - INFO: Writing output finished.
+
+Total cost 2581.88 s
+Thank you!

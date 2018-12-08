@@ -1,0 +1,11 @@
+LINKS BETWEEN CONTIGS
+---------------------
+
+03----> 04 OR 05
+START----> 01
+01----> 03 OR 02
+223303----> END_REVERSE
+05----> 223303 OR 06
+
+
+Each option has a separate fasta file

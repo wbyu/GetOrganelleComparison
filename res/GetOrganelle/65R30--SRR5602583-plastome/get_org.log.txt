@@ -1,0 +1,102 @@
+
+GetOrganelle v1.4.4
+
+gets organelle reads and genomes from genome skimming data by extending.
+Find updates in https://github.com/Kinggerm/GetOrganelle and see README.md for more information.
+
+Python 3.6.5 (default, Sep 20 2018, 17:13:01) 
+[GCC 4.8.5 20150623 (Red Hat 4.8.5-28)]
+/Program/GetOrganelle/get_organelle_reads.py -1 SRR5602583_1.fastq.gz -2 SRR5602583_2.fastq.gz -o 65R30--SRR5602583-plastome -s /Program/GetOrganelle/Library/SeqReference/cp.fasta -R 30 -t 1 -k 75,95,115,127 --max-n-words 1E10 -w 0.65
+
+2018-12-02 00:45:36,347 - INFO: Unzipping reads file: SRR5602583_1.fastq.gz
+2018-12-02 00:45:40,172 - INFO: Unzipping reads file: SRR5602583_2.fastq.gz
+2018-12-02 00:45:44,339 - INFO: Pre-reading fastq ...
+2018-12-02 00:45:44,340 - INFO: Counting read qualities ...
+2018-12-02 00:45:49,370 - INFO: Identified quality encoding format = Sanger
+2018-12-02 00:45:49,398 - INFO: Trimming bases with qualities (0.00%): 33..33  !
+2018-12-02 00:45:50,933 - INFO: Mean error rate = 0.0152
+2018-12-02 00:45:50,956 - INFO: Counting read lengths ...
+2018-12-02 00:45:53,928 - INFO: Mean = 294.7 bp, maximum = 300 bp.
+2018-12-02 00:45:53,929 - INFO: Pre-reading fastq finished.
+
+2018-12-02 00:45:53,929 - INFO: Making seed reads ...
+2018-12-02 00:45:53,931 - INFO: Bowtie2 index existed!
+2018-12-02 00:45:53,931 - INFO: Mapping reads to seed - bowtie2 index ...
+2018-12-02 00:46:44,371 - INFO: Mapping finished.
+2018-12-02 00:46:44,372 - INFO: Seed reads made: 65R30--SRR5602583-plastome/Initial.mapped.fq (3.52 M)
+2018-12-02 00:46:44,372 - INFO: Making seed reads finished.
+
+2018-12-02 00:46:44,372 - INFO: Checking seed reads and parameters ...
+2018-12-02 00:46:45,527 - INFO: Estimated cp base-coverage = 27.32
+2018-12-02 00:46:45,527 - INFO: Setting '-w 192'
+2018-12-02 00:46:45,528 - INFO: Checking seed reads and parameters finished.
+
+2018-12-02 00:46:45,528 - INFO: Making read index ...
+2018-12-02 00:46:59,786 - INFO: Mem 0.56 G, 920627 candidates in all 941530 reads
+2018-12-02 00:46:59,806 - INFO: Pre-grouping reads ...
+2018-12-02 00:46:59,807 - INFO: Setting '--pre-w 192'
+2018-12-02 00:46:59,916 - INFO: Mem 0.521 G, 4269/4269 used/duplicated
+2018-12-02 00:47:01,932 - INFO: Mem 0.567 G, 10 groups made.
+2018-12-02 00:47:02,186 - INFO: Making read index finished.
+
+2018-12-02 00:47:02,187 - INFO: Extending ...
+2018-12-02 00:47:02,187 - INFO: Adding initial words ...
+2018-12-02 00:47:03,645 - INFO: AW 916996
+2018-12-02 00:47:25,402 - INFO: Round 1: 920627/920627 AI 7131 AW 992716 Mem 0.332
+2018-12-02 00:47:48,473 - INFO: Round 2: 920627/920627 AI 7631 AW 1025500 Mem 0.34
+2018-12-02 00:48:16,518 - INFO: Round 3: 920627/920627 AI 7995 AW 1049862 Mem 0.346
+2018-12-02 00:48:44,597 - INFO: Round 4: 920627/920627 AI 8198 AW 1061768 Mem 0.348
+2018-12-02 00:49:11,299 - INFO: Round 5: 920627/920627 AI 8392 AW 1072360 Mem 0.351
+2018-12-02 00:49:46,083 - INFO: Round 6: 920627/920627 AI 8444 AW 1075232 Mem 0.352
+2018-12-02 00:50:13,143 - INFO: Round 7: 920627/920627 AI 8481 AW 1077554 Mem 0.352
+2018-12-02 00:50:32,116 - INFO: Round 8: 920627/920627 AI 8494 AW 1078596 Mem 0.352
+2018-12-02 00:50:57,558 - INFO: Round 9: 920627/920627 AI 8494 AW 1078596 Mem 0.352
+2018-12-02 00:50:57,558 - INFO: No more reads found and terminated ...
+2018-12-02 00:51:01,773 - INFO: Extending finished.
+
+2018-12-02 00:51:01,980 - INFO: Separating filtered fastq file ... 
+2018-12-02 00:51:02,454 - INFO: Separating filtered fastq file finished!
+2018-12-02 00:51:02,457 - INFO: Setting '-k 75,85,95,105,115,127'
+2018-12-02 00:51:02,457 - INFO: Assembling using SPAdes ...
+2018-12-02 00:51:54,410 - INFO: Insert size = 488.352, deviation = 144.949, left quantile = 317, right quantile = 684
+2018-12-02 00:51:54,411 - INFO: Assembling finished.
+
+2018-12-02 00:51:54,411 - INFO: Slimming and disentangling graph ...
+2018-12-02 00:51:55,009 - INFO: Slimming      65R30--SRR5602583-plastome/filtered_spades/K127/assembly_graph.fastg finished!
+2018-12-02 00:51:56,083 - INFO: Disentangling 65R30--SRR5602583-plastome/filtered_spades/K127/assembly_graph.fastg.extend+cp-mt.fastg as a circular genome ... 
+2018-12-02 00:51:56,105 - INFO: Disentangling failed.
+2018-12-02 00:51:56,791 - INFO: Slimming      65R30--SRR5602583-plastome/filtered_spades/K115/assembly_graph.fastg finished!
+2018-12-02 00:51:56,792 - INFO: Disentangling 65R30--SRR5602583-plastome/filtered_spades/K115/assembly_graph.fastg.extend+cp-mt.fastg as a circular genome ... 
+2018-12-02 00:51:56,895 - INFO: Disentangling failed.
+2018-12-02 00:51:57,580 - INFO: Slimming      65R30--SRR5602583-plastome/filtered_spades/K105/assembly_graph.fastg finished!
+2018-12-02 00:51:57,581 - INFO: Disentangling 65R30--SRR5602583-plastome/filtered_spades/K105/assembly_graph.fastg.extend+cp-mt.fastg as a circular genome ... 
+2018-12-02 00:51:57,783 - INFO: Disentangling failed.
+2018-12-02 00:51:58,367 - INFO: Slimming      65R30--SRR5602583-plastome/filtered_spades/K95/assembly_graph.fastg finished!
+2018-12-02 00:51:58,368 - INFO: Disentangling 65R30--SRR5602583-plastome/filtered_spades/K95/assembly_graph.fastg.extend+cp-mt.fastg as a circular genome ... 
+2018-12-02 00:51:58,421 - INFO: Disentangling failed.
+2018-12-02 00:51:59,293 - INFO: Slimming      65R30--SRR5602583-plastome/filtered_spades/K85/assembly_graph.fastg finished!
+2018-12-02 00:51:59,294 - INFO: Disentangling 65R30--SRR5602583-plastome/filtered_spades/K85/assembly_graph.fastg.extend+cp-mt.fastg as a circular genome ... 
+2018-12-02 00:51:59,374 - INFO: Disentangling failed.
+2018-12-02 00:52:00,011 - INFO: Slimming      65R30--SRR5602583-plastome/filtered_spades/K75/assembly_graph.fastg finished!
+2018-12-02 00:52:00,012 - INFO: Disentangling 65R30--SRR5602583-plastome/filtered_spades/K75/assembly_graph.fastg.extend+cp-mt.fastg as a circular genome ... 
+2018-12-02 00:52:00,072 - INFO: Disentangling failed.
+2018-12-02 00:52:00,073 - INFO: Disentangling 65R30--SRR5602583-plastome/filtered_spades/K127/assembly_graph.fastg.extend+cp-mt.fastg as contig(s) ... 
+2018-12-02 00:52:00,275 - INFO: Average cp kmer-coverage = 13.946
+2018-12-02 00:52:00,276 - INFO: Average cp base-coverage = 13.899
+2018-12-02 00:52:00,276 - INFO: Slimming and disentangling graph finished!
+
+2018-12-02 00:52:00,276 - INFO: Writing output ...
+2018-12-02 00:52:00,289 - INFO: Writing PATH1 of cp contig(s) to 65R30--SRR5602583-plastome/cp.K127.contigs.graph1.1.path_sequence.fasta
+2018-12-02 00:52:00,289 - INFO: Writing GRAPH to 65R30--SRR5602583-plastome/cp.K127.contigs.graph1.selected_graph.gfa
+2018-12-02 00:52:00,290 - INFO: Result status: 24 contig(s)
+2018-12-02 00:52:00,328 - INFO: Writing output finished.
+2018-12-02 00:52:00,329 - INFO: Please ...
+2018-12-02 00:52:00,329 - INFO: load the graph file 'assembly_graph.fastg.extend+cp-mt.fastg' in K127,K115,K105,K95,K85,K75
+2018-12-02 00:52:00,329 - INFO: load the CSV file 'assembly_graph.fastg.extend+cp-mt.csv' in K127,K115,K105,K95,K85,K75
+2018-12-02 00:52:00,329 - INFO: visualize and confirm the incomplete result in Bandage.
+2018-12-02 00:52:00,330 - INFO: If the result is nearly complete, 
+2018-12-02 00:52:00,330 - INFO: you can also adjust the arguments to try again.
+2018-12-02 00:52:00,330 - INFO: If you have questions for us, please provide us with the get_org.log.txt file and the graph in the format you like!
+
+Total cost 384.43 s
+Thank you!

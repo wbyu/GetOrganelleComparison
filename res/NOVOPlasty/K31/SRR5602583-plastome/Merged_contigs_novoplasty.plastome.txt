@@ -1,0 +1,21 @@
+LINKS BETWEEN CONTIGS
+---------------------
+
+01----> 03 OR 02
+04----> 06
+03----> 04 OR 14
+10----> 12 OR 13
+14----> 223303 OR 15
+START----> 01
+13----> 06
+223303----> END_REVERSE
+07----> 09
+12----> 06
+
+(Contigs broken up by long homopolymer stretches are linked together as one contig with 15 N's, they can be merged manually in some cases)
+
+(If the region before and after the N zone overlaps, you can merge them by deleting the regions next to N zone from both sides (those are the least reliable))
+
+
+
+Each option has a separate fasta file

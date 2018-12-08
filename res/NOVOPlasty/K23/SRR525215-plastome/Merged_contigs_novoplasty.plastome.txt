@@ -1,0 +1,9 @@
+LINKS BETWEEN CONTIGS
+---------------------
+
+02----> 03 OR 04
+START----> 01
+01----> REPETITIVE REGION----> 02
+
+
+Each option has a separate fasta file

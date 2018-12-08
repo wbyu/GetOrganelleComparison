@@ -1,0 +1,91 @@
+
+GetOrganelle v1.4.4
+
+gets organelle reads and genomes from genome skimming data by extending.
+Find updates in https://github.com/Kinggerm/GetOrganelle and see README.md for more information.
+
+Python 3.6.5 (default, Sep 20 2018, 17:13:01) 
+[GCC 4.8.5 20150623 (Red Hat 4.8.5-28)]
+/Program/GetOrganelle/get_organelle_reads.py -1 ERR964904_1.fastq.gz -2 ERR964904_2.fastq.gz -o 70R10--ERR964904-plastome -s /Program/GetOrganelle/Library/SeqReference/cp.fasta -R 10 -t 1 -k 75,95,115,127 --max-n-words 1E10 -w 0.70
+
+2018-12-02 02:26:34,688 - INFO: Unzipping reads file: ERR964904_1.fastq.gz
+2018-12-02 02:27:00,001 - INFO: Unzipping reads file: ERR964904_2.fastq.gz
+2018-12-02 02:27:25,759 - INFO: Pre-reading fastq ...
+2018-12-02 02:27:25,759 - INFO: Counting read qualities ...
+2018-12-02 02:28:15,327 - INFO: Identified quality encoding format = Illumina 1.8+
+2018-12-02 02:28:15,466 - INFO: Trimming bases with qualities (0.00%): 33..33  !
+2018-12-02 02:28:22,801 - INFO: Mean error rate = 0.0272
+2018-12-02 02:28:22,925 - INFO: Counting read lengths ...
+2018-12-02 02:29:10,577 - INFO: Mean = 101.0 bp, maximum = 101 bp.
+2018-12-02 02:29:10,577 - INFO: Pre-reading fastq finished.
+
+2018-12-02 02:29:10,577 - INFO: Making seed reads ...
+2018-12-02 02:29:10,579 - INFO: Bowtie2 index existed!
+2018-12-02 02:29:10,579 - INFO: Mapping reads to seed - bowtie2 index ...
+2018-12-02 02:35:07,876 - INFO: Mapping finished.
+2018-12-02 02:35:07,876 - INFO: Seed reads made: 70R10--ERR964904-plastome/Initial.mapped.fq (1.00 M)
+2018-12-02 02:35:07,876 - INFO: Making seed reads finished.
+
+2018-12-02 02:35:07,876 - INFO: Checking seed reads and parameters ...
+2018-12-02 02:35:08,004 - INFO: Estimated cp base-coverage = 32.2
+2018-12-02 02:35:08,004 - INFO: Setting '-w 71'
+2018-12-02 02:35:08,004 - INFO: Checking seed reads and parameters finished.
+
+2018-12-02 02:35:08,004 - INFO: Making read index ...
+2018-12-02 02:39:19,780 - INFO: Mem 3.289 G, 12452100 candidates in all 17328830 reads
+2018-12-02 02:39:19,846 - INFO: Pre-grouping reads ...
+2018-12-02 02:39:19,847 - INFO: Setting '--pre-w 71'
+2018-12-02 02:39:23,664 - INFO: Mem 3.081 G, 200000/900760 used/duplicated
+2018-12-02 02:39:47,400 - INFO: Mem 4.208 G, 8165 groups made.
+2018-12-02 02:39:52,874 - INFO: Making read index finished.
+
+2018-12-02 02:39:52,875 - INFO: Extending ...
+2018-12-02 02:39:52,875 - INFO: Adding initial words ...
+2018-12-02 02:39:52,962 - INFO: AW 46688
+2018-12-02 02:42:06,316 - INFO: Round 1: 12452100/12452100 AI 1327207 AW 12630298 Mem 2.553
+2018-12-02 02:44:04,734 - INFO: Round 2: 12452100/12452100 AI 1979572 AW 20697528 Mem 3.559
+2018-12-02 02:45:26,483 - INFO: Round 3: 12452100/12452100 AI 2269310 AW 24864732 Mem 4.549
+2018-12-02 02:47:07,656 - INFO: Round 4: 12452100/12452100 AI 2419985 AW 27128048 Mem 4.815
+2018-12-02 02:48:46,475 - INFO: Round 5: 12452100/12452100 AI 2503328 AW 28394724 Mem 4.964
+2018-12-02 02:50:22,876 - INFO: Round 6: 12452100/12452100 AI 2554620 AW 29180982 Mem 5.057
+2018-12-02 02:51:58,778 - INFO: Round 7: 12452100/12452100 AI 2587209 AW 29682420 Mem 5.116
+2018-12-02 02:53:11,681 - INFO: Round 8: 12452100/12452100 AI 2608869 AW 30012044 Mem 5.155
+2018-12-02 02:54:41,411 - INFO: Round 9: 12452100/12452100 AI 2624929 AW 30254368 Mem 5.183
+2018-12-02 02:56:01,773 - INFO: Round 10: 12452100/12452100 AI 2636555 AW 30428244 Mem 5.204
+2018-12-02 02:56:01,774 - INFO: Hit the round limit 10 and terminated ...
+2018-12-02 02:57:44,965 - INFO: Extending finished.
+
+2018-12-02 02:57:46,385 - INFO: Separating filtered fastq file ... 
+2018-12-02 02:58:28,186 - INFO: Separating filtered fastq file finished!
+2018-12-02 02:58:28,727 - INFO: Setting '-k 75,95'
+2018-12-02 02:58:28,727 - INFO: Assembling using SPAdes ...
+2018-12-02 04:15:03,401 - INFO: Insert size = 470.8, deviation = 40.4756, left quantile = 445, right quantile = 508
+2018-12-02 04:15:03,401 - INFO: Assembling finished.
+
+2018-12-02 04:15:03,402 - INFO: Slimming and disentangling graph ...
+2018-12-02 04:15:07,656 - INFO: Slimming      70R10--ERR964904-plastome/filtered_spades/K95/assembly_graph.fastg finished!
+2018-12-02 04:15:08,891 - INFO: Disentangling 70R10--ERR964904-plastome/filtered_spades/K95/assembly_graph.fastg.extend+cp-mt.fastg as a circular genome ... 
+2018-12-02 04:15:10,296 - INFO: Disentangling failed.
+2018-12-02 04:15:16,163 - INFO: Slimming      70R10--ERR964904-plastome/filtered_spades/K75/assembly_graph.fastg finished!
+2018-12-02 04:15:16,164 - INFO: Disentangling 70R10--ERR964904-plastome/filtered_spades/K75/assembly_graph.fastg.extend+cp-mt.fastg as a circular genome ... 
+2018-12-02 04:15:16,854 - INFO: Disentangling failed.
+2018-12-02 04:15:16,856 - INFO: Disentangling 70R10--ERR964904-plastome/filtered_spades/K95/assembly_graph.fastg.extend+cp-mt.fastg as contig(s) ... 
+2018-12-02 04:15:19,546 - INFO: Average cp kmer-coverage = 6.842
+2018-12-02 04:15:19,546 - INFO: Average cp base-coverage = 98.789
+2018-12-02 04:15:19,546 - INFO: Slimming and disentangling graph finished!
+
+2018-12-02 04:15:19,546 - INFO: Writing output ...
+2018-12-02 04:15:19,549 - INFO: Writing PATH1 of cp contig(s) to 70R10--ERR964904-plastome/cp.K95.contigs.graph1.1.path_sequence.fasta
+2018-12-02 04:15:19,550 - INFO: Writing GRAPH to 70R10--ERR964904-plastome/cp.K95.contigs.graph1.selected_graph.gfa
+2018-12-02 04:15:19,551 - INFO: Result status: 3 contig(s)
+2018-12-02 04:15:19,596 - INFO: Writing output finished.
+2018-12-02 04:15:19,597 - INFO: Please ...
+2018-12-02 04:15:19,597 - INFO: load the graph file 'assembly_graph.fastg.extend+cp-mt.fastg' in K95,K75
+2018-12-02 04:15:19,598 - INFO: load the CSV file 'assembly_graph.fastg.extend+cp-mt.csv' in K95,K75
+2018-12-02 04:15:19,598 - INFO: visualize and confirm the incomplete result in Bandage.
+2018-12-02 04:15:19,598 - INFO: If the result is nearly complete, 
+2018-12-02 04:15:19,598 - INFO: you can also adjust the arguments to try again.
+2018-12-02 04:15:19,598 - INFO: If you have questions for us, please provide us with the get_org.log.txt file and the graph in the format you like!
+
+Total cost 6528.50 s
+Thank you!

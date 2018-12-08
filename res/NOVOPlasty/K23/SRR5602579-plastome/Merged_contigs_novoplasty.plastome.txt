@@ -1,0 +1,15 @@
+LINKS BETWEEN CONTIGS
+---------------------
+
+03----> 07
+18----> 20 OR 19
+15----> 16 OR 17
+START----> 01
+08----> 18 OR 09
+02----> 06 OR 03
+12----> 15
+01----> 08 OR 02
+09----> 10
+
+
+Each option has a separate fasta file

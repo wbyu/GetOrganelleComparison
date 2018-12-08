@@ -1,0 +1,11 @@
+LINKS BETWEEN CONTIGS
+---------------------
+
+05----> 06 OR 07
+02----> 05 OR 03
+06----> 02 OR 04
+START----> 01
+01----> 02 OR 04
+
+
+Each option has a separate fasta file

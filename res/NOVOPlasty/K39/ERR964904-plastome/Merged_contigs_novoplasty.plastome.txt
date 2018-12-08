@@ -1,0 +1,88 @@
+LINKS BETWEEN CONTIGS
+---------------------
+
+27----> 21 OR 39
+39----> 48 OR 57
+34----> 33 OR 29 OR 34
+72----> 97 OR 74
+18----> 50 OR 42 OR 91
+25----> 106 OR 85
+19----> 26 OR 80
+45----> 96 OR 88
+46----> 100 OR 87
+17----> 22 OR 64 OR 23 OR 28
+05----> 13 OR 09 OR 07 OR 27 OR 2139 OR 36
+50----> 2237 OR 09 OR 09
+14----> 22203 OR 66
+02----> 32 OR 03
+52----> 53 OR 13605
+06----> 25 OR 20
+36----> 25536 OR 37
+70----> 24279 OR 83
+67----> 94 OR 71
+31----> 23 OR 22 OR 22
+58----> 21604 OR 63
+62----> 103 OR 81
+73----> 82 OR 73
+53----> 2638 OR 65
+22009---->  OR 
+54----> 27275 OR 78
+65----> 22009 OR 107
+04----> 05 OR 61 OR 10 OR 35
+07----> 08 OR 45
+55----> 26732 OR 58
+42----> 99 OR 90
+20----> 106 OR 85
+16----> 29005 OR 54
+71----> 97 OR 74
+47----> 96 OR 88
+2139----> 2114 OR 61 OR 35
+60----> 86 OR 60
+30----> 52 OR 49
+49----> 53 OR 13605
+24----> 29 OR 33 OR 34
+21----> 21 OR 39
+START----> 01
+13----> 44 OR 15
+68----> 24279 OR 83
+59----> 24829 OR 62
+10----> 79 OR 79
+33----> 92 OR 89
+28----> 2218 OR 64 OR 28
+08----> REPETITIVE REGION----> 47
+22----> 24 OR 31
+43----> 86 OR 60
+63----> 23 OR 22 OR 22
+12----> 21 OR 39
+44----> 86 OR 60
+57----> 68 OR 70
+01----> 02 OR 18 OR 06
+74----> 104 OR 84
+61----> 216746 OR 102
+79----> 2208 OR 1208 OR 76
+35----> 105 OR 108
+51----> 26732 OR 58
+41----> 22829 OR 59
+78----> 14 OR 11
+09----> 14 OR 11
+56----> 26732 OR 58
+40----> 22829 OR 59
+48----> 48 OR 57
+38----> 52 OR 49
+66----> 72 OR 67
+11----> 22203 OR 66
+03----> 12 OR 04
+64----> 82 OR 73
+37----> 55 OR 51
+32----> 41 OR 40
+23----> 23 OR 22 OR 22
+26----> 26 OR 80
+76----> 98 OR 1827
+
+(Contigs broken up by long homopolymer stretches are linked together as one contig with 15 N's, they can be merged manually in some cases)
+
+(If the region before and after the N zone overlaps, you can merge them by deleting the regions next to N zone from both sides (those are the least reliable))
+
+
+
+Each option has a separate fasta file

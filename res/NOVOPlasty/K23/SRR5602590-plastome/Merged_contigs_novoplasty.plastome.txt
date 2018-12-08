@@ -1,0 +1,9 @@
+LINKS BETWEEN CONTIGS
+---------------------
+
+01----> 02 OR 741781
+START----> 01
+741781----> END_REVERSE
+
+
+Each option has a separate fasta file
