@@ -1,2 +1,3 @@
-# GetOrganelleTesting
+# GetOrganelleComparison
+
 Examples and comparisons
